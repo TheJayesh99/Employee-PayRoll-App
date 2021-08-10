@@ -145,14 +145,22 @@
             <label for="notes" class="label text">Notes</label>
             <textarea name="Notes" id="notes" placeholder="" style="height: 100%; width: 100%;  "></textarea>
         </div>
-            <div class="buttonParent">
+        <div class="buttonParent">
                 <a href="#" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                     <button type="reset" class="button resetButton" id="resetButton">Reset</button>
                 </div>
-            </div>
+        </div>
     </div>
 </form>
+<script>
+     const salary = document.querySelector('#salary')
+        const output = document.querySelector('.salary-output')
+        output.textContent = salary.value;
+        salary.addEventListener('input', function () {
+            output.textContent = salary.value
+        })
+</script>
 </body>
 </html>
