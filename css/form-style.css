@@ -153,7 +153,7 @@ select{
 }
 
 .submitButton , .resetButton{
-    border: none;
+    border-radius: 5px;
     background-color: #f5f5f5;
     margin-right: 30px;
 }
