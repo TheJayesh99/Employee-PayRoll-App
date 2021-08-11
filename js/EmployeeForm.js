@@ -9,7 +9,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     try {
       new EmployeeData().name = name.value;
-      console.log(name.value);
       textError.textContent = "";
     } catch (error) {
       textError.textContent = error;
@@ -18,7 +17,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   
   //validate date
   function checkFulldate(fulldate) {
-    console.log(fulldate);
     try {
       new EmployeeData().startDate = fulldate
       dateError.textContent = ""
@@ -52,15 +50,49 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+
+function setTextValue(component,problem){
+  let textError = document.querySelector(component);
+  textError.textContent = problem
+}
+
+function save() {
+  try {
+    let newEmployee = createEmployeePayroll();
+  } catch (error) {
+    alert(error);
+  }
+}
+
+function createEmployeePayroll() {
+  let employee = new EmployeeData()
+  try {
+    employee.name = getInputValueById('#name')
+  } catch (error) {
+    setTextValue('.name-error',error)
+    throw error;
+  }
+  employee.profileImage = getSelectionValue("[name=profile]").pop()
+  employee.gender = getSelectionValue("[name=gender]").pop()
+  employee.department = getSelectionValue("[name=department]")
+  employee.salary = getInputValueById("#salary")
+  employee.notes = getInputValueById("#notes")
+  let date = getInputValueById("#day")+" "+getInputValueById("#month")+" "+getInputValueById("#year")
+  employee.startDate = new Date(date)
+  alert(employee.toString())
+  return employee
+}
+
 const getInputValueById = (id) => {
   let value = document.querySelector(id).value;
   return value;
 };
 
-function save() {
-  try {
-    let newEmployee = new EmployeeData();
-  } catch (error) {
-    alert(error);
-  }
+const getSelectionValue = (propertyValue) => {
+  let allItems = document.querySelectorAll(propertyValue)
+  let selItems = []
+  allItems.forEach(item => {
+    if(item.checked) selItems.push(item.value)
+  })
+  return selItems
 }
