@@ -28,6 +28,7 @@
         <div class="row-content">
             <label for="name" class="label text">Name</label> 
             <input type="text" class="input" id="name" name="name" placeholder="your name.." required>
+            <error-output class="name-error" for="name"></error-output>
         </div>
         <div class="row-content">
             <label class="label text" for="profile image"> Profile Image 
@@ -135,6 +136,7 @@
                     <option value="Dec">December</option>
                 </select>
                 <select name="Year" id="year">
+                    <option value="2021">2021</option>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
@@ -142,6 +144,7 @@
                     <option value="2016">2016</option>
                 </select>
             </div>
+            <error-output class="date-error"></error-output>
         </div>
         <div class="row-content">
             <label for="notes" class="label text">Notes</label>
@@ -156,13 +159,5 @@
         </div>
     </div>
 </form>
-<script>
-     const salary = document.querySelector('#salary')
-        const output = document.querySelector('.salary-output')
-        output.textContent = salary.value;
-        salary.addEventListener('input', function () {
-            output.textContent = salary.value
-        })
-</script>
 </body>
 </html>
