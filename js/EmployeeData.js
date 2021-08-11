@@ -20,7 +20,12 @@ class EmployeeData {
     return this._name;
   }
   set name(name) {
-    this._name = name;
+    let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
+    if (nameRegex.test(name)) {
+      this._name = name;
+    } else {
+      throw "Name is incorrect";
+    }
   }
 
   get profileImage() {
@@ -55,7 +60,11 @@ class EmployeeData {
     return this._startDate;
   }
   set startDate(startDate) {
-    this._startDate = startDate;
+    if (new Date(startDate) <= new Date()) {
+      this._startDate = new Date(startDate);
+    } else {
+      throw "date  is incorrect";
+    }
   }
 
   get notes() {

@@ -1,4 +1,8 @@
 function save() {
-    let employee = new EmployeeData("name","profile","male","sales",123,new Date(),"note")
-    alert(employee.toString())
+   try {
+       let employee = new EmployeeData("Name","profile","male","sales",123,"March 21, 2021","note")
+       alert(employee.toString())
+   } catch (error) {
+       alert(error)
+   }
 }
