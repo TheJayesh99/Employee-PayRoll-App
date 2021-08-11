@@ -59,9 +59,21 @@ function setTextValue(component,problem){
 function save() {
   try {
     let newEmployee = createEmployeePayroll();
+    createAndUpdateStorage(newEmployee)
   } catch (error) {
     alert(error);
   }
+}
+
+function createAndUpdateStorage(employee) {
+  let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"))
+  if (employeePayrollList != undefined) {
+    employeePayrollList.push(employee)
+  } else {
+    employeePayrollList = [employee]
+  }
+  alert(employeePayrollList.toString())
+  localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
 }
 
 function createEmployeePayroll() {
