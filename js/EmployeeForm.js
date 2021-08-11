@@ -108,3 +108,26 @@ const getSelectionValue = (propertyValue) => {
   })
   return selItems
 }
+
+function resetForm() {
+  setValue("#name","")
+  unsetSelectedValue("[name=profile]")
+  unsetSelectedValue("[name=gender]")
+  unsetSelectedValue("[name=department]")
+  setValue('#salary',"")
+  setValue('#notes',"")
+  setValue('#day',"1")
+  setValue('#month',"January")
+  setValue('#year',"2021")
+}
+function  unsetSelectedValue(propertyValue){
+  let allItems = document.querySelectorAll(propertyValue)
+  allItems.forEach(item =>{
+    item.checked = false
+  })
+}
+
+function setValue(id , value) {
+  const element = document.querySelector(id)
+  element.value = value
+}
