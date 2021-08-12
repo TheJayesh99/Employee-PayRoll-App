@@ -47,37 +47,6 @@ const createInnerHtml = () => {
     document.querySelector('#table-display').innerHTML = innerHtml
 };
 
-const createEmployeePayrollJSON = () => {
-    let empPayrollListLocal = [
-        {
-            _name:"Jayesh Mali",
-            _gender:"Male",
-            _department:[
-                "Engineering",
-                "Finace"
-            ],
-            _salary:"100000",
-            _startDate:"29 march 2019",
-            _note:"this is note",
-            _id: new Date().getTime(),
-            _profilePic: "../assets/profile-images/Ellipse -3.png"
-        },
-        {
-            _name:"Jaya Mali",
-            _gender:"Female",
-            _department:[
-                "Engineering",
-            ],
-            _salary:"200000",
-            _startDate:"30 march 2019",
-            _note:"this is note",
-            _id: new Date().getTime(),
-            _profilePic: "../assets/profile-images/Ellipse -4.png" 
-        }
-    ]
-    return empPayrollListLocal
-}
-
 const getDeptHtml = (deptList) =>{
     let depthtml= "";
     for (const dept of deptList){
