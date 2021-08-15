@@ -95,7 +95,7 @@ function createAndUpdateStorage() {
     if(!employeePayrollData){
       employeePayrollList.push(createEmployeePayrollData())
     }else{
-      const index  = employeePayrollList.map(empData => empData._id).indexOf(employeePayrollData._Id)
+      const index = employeePayrollList.map(empData => empData._id).indexOf(employeePayrollData._id)
       employeePayrollList.splice(index,1,createEmployeePayrollData(employeePayrollData._id))
     }
   } else {
