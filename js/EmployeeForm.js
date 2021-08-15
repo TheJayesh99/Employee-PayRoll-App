@@ -60,6 +60,7 @@ function save() {
   try {
     let newEmployee = createEmployeePayroll();
     createAndUpdateStorage(newEmployee)
+    resetForm()
   } catch (error) {
     alert(error);
   }
@@ -78,6 +79,7 @@ function createAndUpdateStorage(employee) {
 
 function createEmployeePayroll() {
   let employee = new EmployeeData()
+  employee.id = new Date().getTime()
   try {
     employee.name = getInputValueById('#name')
   } catch (error) {

@@ -50,7 +50,7 @@ class EmployeeData {
     return this._startDate;
   }
   set startDate(startDate) {
-    if (new Date(startDate) <= new Date()) {
+    if (new Date(startDate) <= new Date()   && (new Date() - new Date(startDate)) >= 30) {
       this._startDate = new Date(startDate);
     } else {
       throw "date  is incorrect";
@@ -71,6 +71,6 @@ class EmployeeData {
       this.startDate == undefined
         ? "undefined"
         : this.startDate.toLocaleDateString("en-us", options);
-    return `name = ${this.name} profileImage = ${this.profileImage}  gender ${this.gender} department = ${this.department} salary = ${this.salary} startDate =  ${empDate} notes = ${this.notes} `;
+    return `id = ${this.id} name = ${this.name} profileImage = ${this.profileImage}  gender ${this.gender} department = ${this.department} salary = ${this.salary} startDate =  ${empDate} notes = ${this.notes} `;
   }
 }
