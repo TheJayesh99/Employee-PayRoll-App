@@ -1,43 +1,6 @@
 {
   "EmployeePayrollDB": [
     {
-      "id": 1,
-      "_name": "Mark",
-      "_gender": "male",
-      "_department": [
-        "Engineering",
-        "Finance"
-      ],
-      "_salary": "500000",
-      "_startDate": "29 Oct 2019",
-      "_note": "All In One",
-      "_profilePic": "../assets/profile-images/Ellipse -3.png"
-    },
-    {
-      "id": 2,
-      "_name": "Bill Gates",
-      "_gender": "male",
-      "_department": [
-        "Engineering"
-      ],
-      "_salary": "500000",
-      "_startDate": "29 Oct 2019",
-      "_note": "Terrific Engineer",
-      "_profilePic": "../assets/profile-images/Ellipse -1.png"
-    },
-    {
-      "_name": "Amarpa Shashanka Keerthi Kumar",
-      "_gender": "female",
-      "_department": [
-        "Sales"
-      ],
-      "_salary": "400000",
-      "_startDate": "29 Oct 2019",
-      "_note": "",
-      "_profilePic": "../assets/profile-images/Ellipse -1.png",
-      "id": 3
-    },
-    {
       "_name": "Jayesh",
       "_profileImage": "../assets/profile-images/Ellipse -3.png",
       "_gender": "male",
@@ -49,6 +12,19 @@
       "_notes": "op bhai",
       "_startDate": "2021-07-31T18:30:00.000Z",
       "id": 4
+    },
+    {
+      "_name": "Omakr",
+      "_profileImage": "../assets/profile-images/Ellipse 1.png",
+      "_gender": "female",
+      "_department": [
+        "engineer",
+        "others"
+      ],
+      "_salary": "476200",
+      "_notes": "Konichiwaaaaaaaaaaaaaaaaa",
+      "_startDate": "2021-08-10T18:30:00.000Z",
+      "id": 5
     }
   ]
 }
